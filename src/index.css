@@ -63,7 +63,7 @@
   border: none;
   width: 90px;
   height: 90px;
-  margin: 0 20px 0 20px;
+  margin: 0 15px 0 15px;
   border-radius: 50%;
   background: rgb(179, 178, 178);
 }
@@ -91,8 +91,7 @@
   max-width: 550px;
 }
 
-.selectedMonth .monthlist li{
-  
+.selectedMonth .monthlist li{ 
   list-style: none; 
   margin: 10px 50px 10px 50px;
 }
@@ -109,4 +108,85 @@
 .productfoot .text {
   width: 100%;
   max-width: 500px;
+}
+
+@media (max-width: 576px) {
+  .productPopUp {
+    padding: 5px;
+  }
+  .productPopUp .popupInside {
+    flex-direction: column;
+    padding: 0px;
+  }
+  .productPopUp .popupInside * {
+    text-align: center;
+  }
+  .productPopUp .popupInside .productName {
+    margin: 10px;
+    font-weight: 500;
+  }
+  .productPopUp .popupInside .productPrice {
+    margin: 5px;
+    font-weight: 500;
+  }
+
+  .productPopUp img {
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .popupTitle {
+    margin: 5px;
+    padding: 5px;
+    font-size: 24px !important;
+  }
+
+  
+  .monthCircle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: calc(15px * 3 + 10rem);
+    align-content: center;
+  }
+
+  .monthCircle button a {
+    font-size: 12px;
+  }
+  .monthCircle button {
+    border: none;
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    border-radius: 50%;
+    background: rgb(179, 178, 178);
+  }
+
+  .selectedMonth .monthlist li{ 
+    list-style: none; 
+    margin: 5px;
+    font-size: 12px;
+  }
+
+  .selectedMonth .monthDetail li{
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .productfoot {
+    display: flex;
+    font-size: 10px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .productfoot .text {
+    width: 100%;
+    max-width: 500px;
+  }
 }

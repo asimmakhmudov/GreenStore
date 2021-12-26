@@ -30,6 +30,7 @@ const Popup = props => {
                             <button onClick={selectedCircle}><a href="#">6 ay</a></button>
                             <button onClick={selectedCircle}><a href="#">9 ay</a></button>
                             <button onClick={selectedCircle}><a href="#">12 ay</a></button>
+                            <button onClick={selectedCircle}><a href="#">15 ay</a></button>
                             <button onClick={selectedCircle}><a href="#">18 ay</a></button>
                             <button onClick={selectedCircle}><a href="#">24 ay</a></button>
                         </Card.Body>
@@ -47,7 +48,6 @@ const Popup = props => {
                         </Card.Body>
                         <Card.Body className='productfoot'>
                             <Card.Text className='text'>
-                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod repellendus asperiores architecto placeat,</span>
                                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod repellendus asperiores architecto placeat,</span>
                             </Card.Text>
                             <Button className='submitbtn' variant='success'>Sifarişi rəsmiləşdir</Button>
