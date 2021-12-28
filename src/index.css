@@ -1,3 +1,56 @@
+/* * {
+  border: 1px solid red;
+} */
+
+/* Navbar */
+.NavbaR .navchild {
+  padding: 10px;
+}
+.Navtext {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #000 !important;
+  font-weight: 500;
+}
+.Navtext * {
+  margin: 0 20px 0 20px;
+}
+.navButton Button {
+  margin-left: 20px;
+  background: none;
+  color: #000;
+  border: none;
+}
+
+Button:active:hover {
+  border: none;
+}
+
+
+.navButton Button:hover {
+  background: none;
+  color: #000;
+}
+
+/* Searchnav */
+.searchNav {
+  background: #00A651 !important;
+  /* height: 10vh; */
+}
+.categoryBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00A651;
+  font-weight: 600;
+  background: white;
+  padding: 0 15px 0 0;
+  width: 200px;
+  height: 40px;
+  border-radius: 18px;
+}
+/* popup */
 .productBody {
   position: fixed;
   background: #00000050;
@@ -6,6 +59,7 @@
   align-items: center;
   width: 100%;
   height: 100vh;
+  z-index: 5;
   top: 0;
   left: 0;
 }
@@ -110,6 +164,42 @@
   max-width: 500px;
 }
 
+/* footer */
+.footer {
+  height: 30vh;
+  display: flex;
+  position: relative;
+  background: #000;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  color: white;
+}
+.footer .footCont {
+  display: flex;
+  justify-content: start;
+  height: 50%;
+  padding: 10px;
+  list-style: none;
+}
+.footer .footCont ul li {
+  display: flex;
+  list-style: none;
+}
+.footIcons {
+  justify-content: center;
+}
+.footIcons * {
+  margin: 5px;
+  font-size: 20px;
+  color: white;
+}
+
+
+/* responsive */
 @media (max-width: 576px) {
   .productPopUp {
     padding: 5px;
@@ -188,5 +278,10 @@
   .productfoot .text {
     width: 100%;
     max-width: 500px;
+  }
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0 20px 0;
   }
 }
