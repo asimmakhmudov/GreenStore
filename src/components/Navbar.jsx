@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Logo from '../assets/GreenTekno.png'
 import { MdAddShoppingCart } from "react-icons/md";
 import { AiOutlineHeart } from "react-icons/ai"
@@ -6,6 +6,10 @@ import { Navbar, Container, Button, Nav, Offcanvas, Form, FormControl } from 're
 import "../index.css"
 
 const NavBar = () => {
+    const [search, setSearch] = useState([]);
+    fetch('https://fakestoreapi.com/products/categories')
+        .then(res => res.json())
+        .then(json => setSearch(json))
     return (
         <div className='NavbaR'>
             <Navbar className='navchild' expand="lg" variant="light" bg="light">
@@ -32,15 +36,27 @@ const NavBar = () => {
             <Navbar className='searchNav' variant='light' expand={false}>
                 <Container fluid>
                     <span className='categoryBtn'><Navbar.Toggle aria-controls="offcanvasNavbar" style={{ margin: "10px" }} />Kateqoriya</span>
-                    <Form className="d-flex justify-content-center">
-                        <FormControl
-                            type="search"
-                            placeholder="Search"
-                            className="me-2"
-                            aria-label="Search"
-                        />
-                        <Button variant="outline-success">Search</Button>
-                    </Form>
+
+                    {/* {search.filter((val) => {
+                        if(search == '') {
+                            return val
+                        }
+                        else if(val.category.toLowerCase().include(search.toLowerCase())){
+                            return val
+                        }
+                    }).map((val, key) => ( */}
+                        <Form className="d-flex justify-content-center">
+                            <FormControl
+                                type="search"
+                                placeholder="Search"
+                                className="me-2"
+                                aria-label="Search"
+                                onChange={(event) => {setSearch(event.target.value)}}
+                            />
+                            <Button variant="outline-success">Search</Button>
+                        </Form>
+                    {/* ))} */}
+
                     <Navbar.Offcanvas
                         id="offcanvasNavbar"
                         aria-labelledby="offcanvasNavbarLabel"

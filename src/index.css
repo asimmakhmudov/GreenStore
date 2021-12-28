@@ -198,6 +198,34 @@ Button:active:hover {
   color: white;
 }
 
+/* products */
+.ProductS {
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.proCont {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+  padding: 15px;
+}
+.proCont .prodimg {
+  height: 250px;
+  width: 200px;
+}
+.productLink {
+  text-decoration: none;
+  color: #00A651;
+}
 
 /* responsive */
 @media (max-width: 576px) {

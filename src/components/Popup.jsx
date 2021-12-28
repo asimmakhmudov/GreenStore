@@ -3,10 +3,6 @@ import { Card, CardGroup, ListGroup, Button } from 'react-bootstrap';
 import product from '../components/product.jpg'
 import '../index.css'
 
-const selectedCircle =()=> {
-
-}
-
 const Popup = props => {
     return(
             <div className='productBody'>
@@ -27,12 +23,12 @@ const Popup = props => {
                             <Card.Text className='productPrice'>$500.9</Card.Text>
                         </Card.Body>
                         <Card.Body className='monthCircle'>
-                            <button onClick={selectedCircle}><a href="#">6 ay</a></button>
-                            <button onClick={selectedCircle}><a href="#">9 ay</a></button>
-                            <button onClick={selectedCircle}><a href="#">12 ay</a></button>
-                            <button onClick={selectedCircle}><a href="#">15 ay</a></button>
-                            <button onClick={selectedCircle}><a href="#">18 ay</a></button>
-                            <button onClick={selectedCircle}><a href="#">24 ay</a></button>
+                            <button><a href="#">6 ay</a></button>
+                            <button><a href="#">9 ay</a></button>
+                            <button><a href="#">12 ay</a></button>
+                            <button><a href="#">15 ay</a></button>
+                            <button><a href="#">18 ay</a></button>
+                            <button><a href="#">24 ay</a></button>
                         </Card.Body>
                         <Card.Body className='selectedMonth'>
                             <ListGroup horizontal className='monthlist'>
